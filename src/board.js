@@ -6,7 +6,7 @@ class Board {
   }
 
   claimSquare(squareNumber) {
-    if (this.currentPlayer === 'X') {
+    if (this.isPlayerX()) {
       this.playerXMoves.push(squareNumber)
     } else {
       this.playerOMoves.push(squareNumber)
@@ -20,6 +20,10 @@ class Board {
     } else {
       this.currentPlayer = 'X'
     }
+  }
+
+  isPlayerX() {
+    return this.currentPlayer === 'X'
   }
 }
 
