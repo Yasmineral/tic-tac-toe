@@ -4,4 +4,7 @@ $(document).ready(function() {
     $(this).html('X')
   });
   
+  $('#restart').click(function() {
+    $('.col').empty()
+  })
 })
