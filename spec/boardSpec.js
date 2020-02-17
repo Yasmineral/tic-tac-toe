@@ -2,14 +2,20 @@ describe("Board", function() {
   beforeEach(function() {
     board = new Board()
   })
-  it("the first move is added to player X's list of moves", function() {
-    board.claimSquare(1)
-    expect(board.playerXMoves).toEqual([1])
+  it("the first move belongs to player X", () => {
+    expect(board.player).toEqual("X")
   })
-  it("the second move is added to player O's list of moves", function() {
-    board.claimSquare(1)
-    board.claimSquare(4)
-    expect(board.playerOMoves).toEqual([4])
+  describe("#switchPlayers", () => {
+    it("the second move is attributed to player O", () => {
+      board.claimSquare(0)
+      expect(board.player).toEqual("O")
+    })
+  })
+  describe("#claimSquare", () => {
+    it("marks the current player's move within the game", () => {
+      board.claimSquare(0)
+      expect(board.moves[0]).toEqual("X")
+    })
   })
 })
 

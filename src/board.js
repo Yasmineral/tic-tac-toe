@@ -1,29 +1,28 @@
 class Board {
   constructor() {
-    this.playerXMoves = []
-    this.playerOMoves = []
-    this.currentPlayer = 'X'
+    this.player = "X"
+    this.moves = 
+    [0, 0, 0,
+     0, 0, 0,
+     0, 0, 0 ]
   }
 
-  claimSquare(squareNumber) {
-    if (this.isPlayerX()) {
-      this.playerXMoves.push(squareNumber)
-    } else {
-      this.playerOMoves.push(squareNumber)
-    }
-    this.switchPlayers()  
+  claimSquare(square) {
+    this.moves[square] = (this.player)
+    this.switchPlayers()
   }
+
+
 
   switchPlayers() {
-    if (this.currentPlayer === 'X') {
-      this.currentPlayer = 'O'
-    } else {
-      this.currentPlayer = 'X'
+    if (this.player === "X") {
+      return this.player = "O"
+    } else if (this.player === "O") {
+      return this.player = "X"
     }
   }
 
-  isPlayerX() {
-    return this.currentPlayer === 'X'
-  }
+  
 }
+
 
