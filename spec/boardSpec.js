@@ -17,5 +17,15 @@ describe("Board", function() {
       expect(board.moves[0]).toEqual("X")
     })
   })
+  describe("#checkForWinner", () => {
+    it("returns false if there are no winning moves", () => {
+      board.moves = [0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+      expect(board.checkForWinner()).toEqual(false)
+    })
+    it("returns true if there is a horizontal winning move", () => {
+      board.moves = ["X", "X", "X", 0, 0, 0, 0, 0, 0 ]
+      expect(board.checkForWinner()).toEqual(true)
+    })
+  })
 })
 

@@ -16,7 +16,7 @@ class Board {
       [0, 4, 8],
       [2, 4, 6]
     ]
-  }
+  };
 
   claimSquare(square) {
     this.moves[square] = (this.player)
@@ -31,4 +31,11 @@ class Board {
     }
   };
 
-
+  checkForWinner() {
+    if(this.moves[0] && this.moves[1] && this.moves[2] === this.player) {
+      return true
+    } else {
+      return false
+    }
+  };
+}
