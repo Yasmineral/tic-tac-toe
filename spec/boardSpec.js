@@ -46,6 +46,14 @@ describe("Board", function() {
       board.moves = [0, 0, "X", 0, 0, "X", 0, 0, "X" ]
       expect(board.checkForWinner()).toEqual(true)
     })
+    it("returns true if there is a left diagonal winning move", () => {
+      board.moves = ["X", 0, 0, 0, "X", 0, 0, 0, "X" ]
+      expect(board.checkForWinner()).toEqual(true)
+    })
+    it("returns true if there is a right diagonal winning move", () => {
+      board.moves = [0, 0, "X", 0, "X", 0, "X", 0, 0 ]
+      expect(board.checkForWinner()).toEqual(true)
+    })
   });
 })
 
