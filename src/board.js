@@ -35,7 +35,9 @@ class Board {
     if(this.moves[0] && this.moves[1] && this.moves[2] === this.player ||
       this.moves[3] && this.moves[4] && this.moves[5] === this.player ||
       this.moves[6] && this.moves[7] && this.moves[8] === this.player ||
-      this.moves[0] && this.moves[3] && this.moves[6] === this.player) {
+      this.moves[0] && this.moves[3] && this.moves[6] === this.player ||
+      this.moves[1] && this.moves[4] && this.moves[7] === this.player ||
+      this.moves[2] && this.moves[5] && this.moves[8] === this.player) {
       return true
     } else {
       return false

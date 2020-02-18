@@ -38,6 +38,14 @@ describe("Board", function() {
       board.moves = ["X", 0, 0, "X", 0, 0, "X", 0, 0 ]
       expect(board.checkForWinner()).toEqual(true)
     })
+    it("returns true if there is a middle verticle winning move", () => {
+      board.moves = [0, "X", 0, 0, "X", 0, 0, "X", 0 ]
+      expect(board.checkForWinner()).toEqual(true)
+    })
+    it("returns true if there is a right verticle winning move", () => {
+      board.moves = [0, 0, "X", 0, 0, "X", 0, 0, "X" ]
+      expect(board.checkForWinner()).toEqual(true)
+    })
   });
 })
 
