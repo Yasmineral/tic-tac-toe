@@ -7,7 +7,7 @@ describe("Board", function() {
   })
   describe("#switchPlayers", () => {
     it("the second move is attributed to player O", () => {
-      board.claimSquare(0)
+      board.switchPlayers()
       expect(board.player).toEqual("O")
     })
   });
@@ -53,6 +53,10 @@ describe("Board", function() {
     it("returns true if there is a right diagonal winning move", () => {
       board.moves = [0, 0, "X", 0, "X", 0, "X", 0, 0 ]
       expect(board.checkForWinner()).toEqual(true)
+    })
+    it("returns false if a winning combination has a mixture of X and O moves", () => {
+      board.moves = [0, 0, "X", 0, "O", 0, "X", 0, 0 ]
+      expect(board.checkForWinner()).toEqual(false)
     })
   });
 })
