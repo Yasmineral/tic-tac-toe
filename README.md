@@ -14,3 +14,29 @@ The rules of tic-tac-toe are as follows:
 
 Build the business logic for a game of tic tac toe. It should be easy to implement a working game of tic tac toe by combining your code with any user interface, whether web or command line.
 
+
+## User stories
+
+```
+As two players,
+So we can play a game of tic tac toe,
+We want to set up a new game.
+```
+
+```
+As two players,
+So we can continue our game,
+We want to switch turns.
+```
+
+```
+As a player,
+So I can start to win a game of tic tac toe,
+I want to claim an empty field on the board.
+```
+
+```
+As a player,
+So I can win a game of tic tac toe,
+I want to claim all fields in a row, column or diagonal line before my opponent does.
+```
