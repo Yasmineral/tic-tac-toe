@@ -16,17 +16,13 @@ $(document).ready(function() {
     $('.col').empty()
     $('#winner').empty()
     $('.col').removeClass('already-played')
+    board.moves = [0, 0, 0, 0, 0, 0, 0, 0, 0 ]
   });
 
   function winner() {
     if (board.checkForWinner()) {
       $('#winner').text(board.player + " is the winner!")
       $('.col').addClass('already-played')
-     reset()
     }
   };
-
-  function reset() {
-    board.moves = [0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-  }
 });
