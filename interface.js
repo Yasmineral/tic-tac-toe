@@ -2,8 +2,7 @@ $(document).ready(function() {
   const allSquares = document.querySelectorAll('.col')
   let board = new Board()
 
-  $('.col').click(function(e) {
-    colNum = e.target.dataset.num
+  $('.col').click(function() {
     $(this).html(board.player)
     square = $(this).data('num')
     board.claimSquare(square)
@@ -12,6 +11,7 @@ $(document).ready(function() {
   });
 
   
+
   $('#restart').click(function() {
     $('.col').empty()
     $('#winner').empty()

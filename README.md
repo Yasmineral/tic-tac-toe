@@ -40,3 +40,7 @@ As a player,
 So I can win a game of tic tac toe,
 I want to claim all fields in a row, column or diagonal line before my opponent does.
 ```
+
+## TO ADD
+* Draw functionality
+* Disable each column incrementally so that a player cannot click in a square that has already been claimed
