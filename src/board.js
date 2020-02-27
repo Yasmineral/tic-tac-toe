@@ -44,11 +44,3 @@ class Board {
   }
 }
           
-      
-  
-       
-
-// cycle through each array within winningMoves
-// if EVERY number in the array can be found within the 'plays' array, return true
-// else false
-
